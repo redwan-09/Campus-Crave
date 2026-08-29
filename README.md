@@ -184,16 +184,10 @@ In your Vercel project → Settings → Environment Variables, add:
 
 ### 5. Run migrations against the production database
 
-From your local machine, temporarily point `DATABASE_URL` at your
-production database and run:
+From your local machine, temporarily point `DATABASE_URL` at your production database and run:
 
 ```bash
 npm run db:migrate
-npm run db:seed   # optional — only if you want demo accounts in production too
-```
-
-(Or wire this into a CI step / Vercel build command if you prefer —
-just make sure migrations run before the app receives traffic.)
 
 ### 6. Deploy
 
