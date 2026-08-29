@@ -333,7 +333,7 @@ export default function LandingPage() {
           </div>
           <div className="flex flex-wrap justify-between items-center pt-6 gap-3">
             <p className="text-xs text-ink-soft">
-              © 2026 Campus-Crave. Built for Bangladesh&apos;s campuses.
+              © 2026 Campus-Crave by RSM. Built for Bangladesh&apos;s campuses.
             </p>
             <p className="text-xs text-ink-soft flex items-center gap-1.5">
               <Check size={13} className="text-leaf" /> Made for break-time rush
