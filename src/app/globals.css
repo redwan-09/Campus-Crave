@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #15132c;
+  --ink-soft: #4a4768;
+  --periwinkle: #6e7fe0;
+  --periwinkle-deep: #4e5cc4;
+  --periwinkle-tint: #eef0fc;
+  --periwinkle-tint-2: #dce1f8;
+  --cream: #fff8ec;
+  --cream-deep: #fcefd8;
+  --marigold: #f5a623;
+  --marigold-deep: #d98d0f;
+  --leaf: #37a876;
+  --leaf-tint: #def3e9;
+  --chili: #e8543f;
+  --chili-tint: #fbe3df;
+  --line: rgba(21, 19, 44, 0.1);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-periwinkle: var(--periwinkle);
+  --color-periwinkle-deep: var(--periwinkle-deep);
+  --color-periwinkle-tint: var(--periwinkle-tint);
+  --color-periwinkle-tint-2: var(--periwinkle-tint-2);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-marigold: var(--marigold);
+  --color-marigold-deep: var(--marigold-deep);
+  --color-leaf: var(--leaf);
+  --color-leaf-tint: var(--leaf-tint);
+  --color-chili: var(--chili);
+  --color-chili-tint: var(--chili-tint);
+  --color-line: var(--line);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-bn: "Hind Siliguri", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Manrope", sans-serif;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-bn {
+  font-family: "Hind Siliguri", "Manrope", sans-serif;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+.animate-pulse-dot {
+  animation: pulseDot 1.6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-in {
+  animation: slideIn 0.35s ease both;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--periwinkle-tint-2);
+  border-radius: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
